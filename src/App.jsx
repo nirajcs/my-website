@@ -20,7 +20,7 @@ function App() {
         </section>
       </Element>
       <Element name='skills'>    
-        <section className='h-screen bg-yellow-500 '>
+        <section className='h-screen flex flex-col items-center p-20'>
           <Skills/>
         </section>
       </Element>
