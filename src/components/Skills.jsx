@@ -20,10 +20,10 @@ const Skills = () => {
   return (
     <>
       <div className='flex justify-between w-full'>
-        <div onClick={()=>{setTechView(true)}} className={`w-1/2 cursor-pointer text-center text-lg md:text-4xl font-bold rounded-tl-lg rounded-tr-lg ${techView ? 'bg-primaryColor text-white' : 'text-primaryColor'}`}><h2>Technical</h2></div>
-        <div onClick={()=>{setTechView(false)}} className={`w-1/2 cursor-pointer text-center text-lg md:text-4xl font-bold rounded-tl-lg rounded-tr-lg ${techView ? 'text-primaryColor' : 'bg-primaryColor text-white'}`}><h2>Non-Technical</h2></div>
+        <div onClick={()=>{setTechView(true)}} className={`w-1/2 p-2 cursor-pointer text-center text-lg md:text-4xl font-bold rounded-tl-lg rounded-tr-lg ${techView ? 'bg-primaryColor text-white' : 'text-primaryColor'}`}><h2>Technical</h2></div>
+        <div onClick={()=>{setTechView(false)}} className={`w-1/2 p-2 cursor-pointer text-center text-lg md:text-4xl font-bold rounded-tl-lg rounded-tr-lg ${techView ? 'text-primaryColor' : 'bg-primaryColor text-white'}`}><h2>Non-Technical</h2></div>
       </div>
-      <div className='h-full w-full bg-gray-200 overflow-y-auto border border-primaryColor border-4 rounded-bl-lg rounded-br-lg'>
+      <div className='h-full w-full bg-gray-200 overflow-y-auto border border-primaryColor border-2 rounded-bl-lg rounded-br-lg'>
         {
           skills && skills.length > 0 ? (
             skills.map((skill,index) => (
