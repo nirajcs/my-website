@@ -40,8 +40,8 @@ const Projects = () => {
                 <div className="bg-gray-200 ps-5 h-full overflow-y-auto">
                   <ul style={listStyle}>
                     {
-                      project.technologies && project.technologies.map((tech)=>(
-                        <li>{tech}</li>
+                      project.technologies && project.technologies.map((tech,index)=>(
+                        <li key={index}>{tech}</li>
                       ))
                     }
                   </ul>

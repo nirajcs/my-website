@@ -6,11 +6,14 @@ import Home from './components/Home'
 import Projects from './components/Projects'
 import Contact from './components/Contact'
 import Skills from './components/Skills'
+import {ToastContainer} from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
 
   return (
     <>
+    <ToastContainer/>
       <section id='header' className='sticky top-0 z-10'>
         <Header/>
       </section>
@@ -30,7 +33,7 @@ function App() {
         </section>
       </Element>
       <Element name='contact'>
-        <section className='h-screen bg-blue-500 '>
+        <section className='h-screen flex flex-col md:flex-row p-10 pb-20'>
           <Contact/>
         </section>
       </Element>
