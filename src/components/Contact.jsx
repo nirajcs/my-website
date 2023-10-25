@@ -37,15 +37,15 @@ const Contact = () => {
           <form ref={form} onSubmit={sendEmail}>
           <div className='w-full my-5 rounded'>
             <label htmlFor="name">Name</label>
-            <input type="text" name='from_name' placeholder='Enter Your Name' value={name} onChange={(e)=>setName(e.target.value)} id='name' className='w-full h-10 rounded border border-2 border-gray-300' />
+            <input type="text" name='from_name' placeholder='Enter Your Name' value={name} onChange={(e)=>setName(e.target.value)} id='name' className='w-full h-10 ps-5 rounded border border-2 border-gray-300' />
           </div>
           <div className='w-full my-5 rounded'>
             <label htmlFor="email">Email</label>
-            <input type="email" name='from_email' placeholder='Enter Your Email' value={email} onChange={(e)=>setEmail(e.target.value)} id='email' className='w-full h-10 rounded border border-2 border-gray-300' />
+            <input type="email" name='from_email' placeholder='Enter Your Email' value={email} onChange={(e)=>setEmail(e.target.value)} id='email' className='w-full h-10 ps-5 rounded border border-2 border-gray-300' />
           </div>
             <div className='w-full my-5 rounded'>
               <label htmlFor="message">Message</label>
-              <textarea id='message' name='message' placeholder='Enter Your Name' value={message} onChange={(e)=>setMessage(e.target.value)} className='w-full rounded border-2 border-gray-300' cols="30" rows="7"></textarea>
+              <textarea id='message' name='message' placeholder='Enter Your Message' value={message} onChange={(e)=>setMessage(e.target.value)} className='w-full ps-5 rounded border-2 border-gray-300' cols="30" rows="7"></textarea>
             </div>
             <button type="submit" className="text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700">Send Message</button>
           </form>
