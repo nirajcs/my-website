@@ -14,6 +14,13 @@ export const projectsData = [
         description:"DC Wears is an E-commerce website for selling and purchasing clothings related to superheros of DC universe."
     },
     {
+        name:'Password-Generator',
+        image:'/project-images/password-generator.png',
+        git:'https://github.com/nirajcs/Password-Generator',
+        technologies:['ReactJS','ExpressJS','NodeJS','MongoDB','Tailwind CSS','Json Web Token'],
+        description:"Password Generator is a mini-projects used to generate random passwords and user can save favourite passwords."
+    },
+    {
         name:'Netflix-clone',
         image:'/project-images/netflix.png',
         technologies:['TMDB API','React-youtube','ReactJS'],
