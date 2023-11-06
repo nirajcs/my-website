@@ -19,6 +19,7 @@ const Skills = () => {
 
   return (
     <>
+      <div className='w-full my-10 md:hidden'><h2 className='text-5xl font-bold'>Skills</h2></div>
       <div className='flex justify-between w-full'>
         <div onClick={()=>{setTechView(true)}} className={`w-1/2 p-2 cursor-pointer text-center text-lg md:text-4xl font-bold rounded-tl-lg rounded-tr-lg ${techView ? 'bg-primaryColor text-white' : 'text-primaryColor'}`}><h2>Technical</h2></div>
         <div onClick={()=>{setTechView(false)}} className={`w-1/2 p-2 cursor-pointer text-center text-lg md:text-4xl font-bold rounded-tl-lg rounded-tr-lg ${techView ? 'text-primaryColor' : 'bg-primaryColor text-white'}`}><h2>Non-Technical</h2></div>

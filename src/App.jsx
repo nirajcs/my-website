@@ -28,7 +28,7 @@ function App() {
         </section>
       </Element>
       <Element name='projects'>
-        <section className='h-screen bg-primaryColor flex justify-center items-center pb-20'>
+        <section className='h-screen bg-primaryColor flex flex-col justify-center items-center pb-20'>
           <Projects/>
         </section>
       </Element>
