@@ -18,7 +18,7 @@ const Projects = () => {
       {projects.map((project, index) => (
         <div
           key={index}
-          className={`bg-primaryColor h-5/6 w-full md:w-1/2 lg:w-1/4 mx-5 flex-shrink-0 ${
+          className={`bg-primaryColor h-5/6 w-5/6 md:w-1/2 lg:w-1/4 mx-5 flex-shrink-0 ${
             hovered === index ? 'p-0 border border-2 border-black' : 'p-3 rounded-lg'
           }`} 
         >
