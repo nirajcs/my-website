@@ -1,4 +1,5 @@
-import React, { useRef, useState } from 'react'
+/* eslint-disable react/no-unknown-property */
+import { useRef, useState } from 'react'
 import emailjs from '@emailjs/browser';
 import { toast } from 'react-toastify'
 import { SiLinkedin } from 'react-icons/si'
@@ -31,8 +32,8 @@ const Contact = () => {
   };
   return (
     <>
-      <div className='h-full md:w-1/2'>
-        <div className='p-5'>
+      <div className='animate-onscroll-trigger h-full md:w-1/2'>
+        <div animation-settings="animate__fadeInLeft" className='animate__onscroll p-5'>
           <h1 style={{fontFamily:'sans-serif'}} className='font-bold text-3xl lg:text-5xl'>Say Something!!</h1>
           <form ref={form} onSubmit={sendEmail}>
           <div className='w-full my-5 rounded'>
@@ -51,14 +52,16 @@ const Contact = () => {
           </form>
         </div>
       </div>
-      <div className='h-full md:w-1/2 md:my-0 my-5 bg-primaryColor flex flex-col justify-center items-center rounded-lg p-5'>
-        <div className='my-5'>
-          <h1 style={{fontFamily:'sans-serif'}} className='font-bold text-3xl lg:text-5xl text-white'>Connect Me On!!</h1>
-        </div>
-        <div className='flex'>
-          <a href="https://linkedin.com/in/niraj-c-s-0aa706244" target='_blank'><SiLinkedin className='text-white text-4xl mx-3'/></a>
-          <a href="https://instagram.com/niraj_c_s?igshid=MzMyNGUyNmU2YQ==" target='_blank'><BsInstagram className='text-white text-4xl mx-3'/></a>
-          <a href="https://github.com/nirajcs" target='_blank'><BsGithub className='text-white text-4xl mx-3'/></a>
+      <div className='animate-onscroll-trigger h-full md:w-1/2 md:my-0 my-5 bg-primaryColor flex flex-col justify-center items-center rounded-lg p-5'>
+        <div animation-settings="animate__fadeInRight" className='animate__onscroll flex flex-col justify-center items-center'>
+          <div className='my-5'>
+            <h1 style={{fontFamily:'sans-serif'}} className='font-bold text-3xl lg:text-5xl text-white'>Connect Me On!!</h1>
+          </div>
+          <div className='flex'>
+            <a href="https://linkedin.com/in/niraj-c-s-0aa706244" target='_blank' rel="noreferrer"><SiLinkedin className='text-white text-4xl mx-3'/></a>
+            <a href="https://instagram.com/niraj_c_s?igshid=MzMyNGUyNmU2YQ==" target='_blank' rel="noreferrer"><BsInstagram className='text-white text-4xl mx-3'/></a>
+            <a href="https://github.com/nirajcs" target='_blank' rel="noreferrer"><BsGithub className='text-white text-4xl mx-3'/></a>
+          </div>
         </div>
       </div>
     </>

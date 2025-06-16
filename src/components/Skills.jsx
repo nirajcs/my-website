@@ -1,6 +1,7 @@
-import React, { useEffect, useState } from 'react'
-import { BsStarFill,BsStar } from 'react-icons/bs'
+/* eslint-disable react/no-unknown-property */
+import { useEffect, useState } from 'react'
 import { technical,nonTechnical } from '../data/skills'
+import SkillCard from './SkillCard'
 
 
 const Skills = () => {
@@ -18,42 +19,39 @@ const Skills = () => {
   
 
   return (
-    <>
-      <div className='w-full mb-10 md:hidden'><h2 className='text-5xl font-bold'>Skills</h2></div>
-      <div className='flex justify-between w-full'>
-        <div onClick={()=>{setTechView(true)}} className={`w-1/2 p-2 cursor-pointer text-center text-lg md:text-4xl font-bold rounded-tl-lg rounded-tr-lg ${techView ? 'bg-primaryColor text-white' : 'text-primaryColor'}`}><h2>Technical</h2></div>
-        <div onClick={()=>{setTechView(false)}} className={`w-1/2 p-2 cursor-pointer text-center text-lg md:text-4xl font-bold rounded-tl-lg rounded-tr-lg ${techView ? 'text-primaryColor' : 'bg-primaryColor text-white'}`}><h2>Non-Technical</h2></div>
+    <div className='animate-onscroll-trigger md:w-10/12 w-full'>
+      <div animation-settings="animate__fadeInLeft" className="animate__onscroll w-full flex items-center justify-between">
+        <h2 className="text-5xl font-bold">Skills</h2>
+        <div className="p-4">
+          <div className="flex md:text-2xl text-sm border-b border-gray-200">
+            <button
+              className={`px-4 py-2 ${
+                techView
+                  ? "border-b-2 border-gray-500 text-gray-500"
+                  : "text-gray-500"
+              }`}
+              onClick={() => setTechView(true)}
+            >
+              Technical
+            </button>
+            <button
+              className={`px-4 py-2 ${
+                !techView
+                  ? "border-b-2 border-gray-500 text-gray-500"
+                  : "text-gray-500"
+              }`}
+              onClick={() => setTechView(false)}
+            >
+              Non-Technical
+            </button>
+          </div>
+        </div>
       </div>
-      <div className='h-full w-full bg-gray-200 overflow-y-auto border border-primaryColor border-2 rounded-bl-lg rounded-br-lg'>
-        {
-          skills && skills.length > 0 ? (
-            skills.map((skill,index) => (
-              <div className='w-full flex justify-between px-5 py-2 mb-5 hover:bg-gray-100' key={index}>
-                <div className='w-1/2 px-5'>
-                  <h1 className='md:text-2xl font-bold'>{skill.name}</h1>
-                </div>
-                <div className='w-1/2 px-5 flex justify-end items-center'>
-                  {
-                    (() => {
-                      const stars = [];
-                      for (let i = 1; i <= 5; i++) {
-                        if (i <= skill.star) {
-                          stars.push(<BsStarFill key={i} className='md:text-2xl mx-1 md:mx-3 text-yellow-500' />);
-                        } else {
-                          stars.push(<BsStar key={i} className='md:text-2xl mx-1 md:mx-3 text-yellow-500' />);
-                        }
-                      }
-                      return stars;
-                    })()
-                  }
-                </div>
-              </div>
-            ))
-          ) : null
-        }
+      <div animation-settings="animate__fadeInRight" className="animate__onscroll">
+        <SkillCard skills={skills} />
       </div>
-    </>
-  )
+    </div>
+  );
 }
 
 export default Skills

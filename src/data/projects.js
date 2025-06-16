@@ -1,4 +1,24 @@
 export const projectsData = [
+        {
+        name:'Toggle',
+        image:'/project-images/Toggle.png',
+        liveLink:'https://app.drivetoggle.com/',
+        technologies:['ReactJs','Redux','Json Web Token','ExpressJS','NodeJS','NestJS','MongoDB','Firebase','RingCentral','HERE maps','Tailwind CSS','GraphQL','Sendgrid','Apollo studio','AWS Cognito'],
+        description:"An advanced Freight Management System (FMS) that ensures the entire freight-moving process is smooth. The FMS is designed to improve the lives of drivers by connecting them to the market and providing them with opportunities to increase earnings for both new and experienced drivers."
+    },
+    {
+        name:'Juntos',
+        image:'/project-images/Juntos.png',
+        liveLink:'https://juntosntech.com/',
+        technologies:['ReactJs','Redux','Json Web Token','ExpressJS','NodeJS','MongoDB','Tailwind CSS','Nodemailer','Multer','Material UI','Axios'],
+        description:"Juntos is a platform that serves an organization in managing the employees, projects and timesheets. The platform allows login for emplyees with different roles such as Super Admin, Sales, Finance and Management."
+    },
+    {
+        name:'Breis',
+        image:'/project-images/Breis.png',
+        technologies:['ReactJs','Redux','Json Web Token','ExpressJS','NodeJS','MongoDB','Tailwind CSS','Axios','Material UI','React-ChartJS','AWS'],
+        description:"A care management platform tailored to the unique needs of elderly patients. The platform is integrated with web and mobile applications to handle everything from employee management, payroll, rostering, resident care planning, medication administration, invoicing, and communication."
+    },
     {
         name:'Medicare',
         image:'/project-images/medicare.png',
