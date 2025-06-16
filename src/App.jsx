@@ -1,4 +1,3 @@
-import React from 'react'
 import './App.css'
 import { Element } from 'react-scroll';
 import Header from './components/Header'
@@ -8,17 +7,21 @@ import Contact from './components/Contact'
 import Skills from './components/Skills'
 import {ToastContainer} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import "animate.css"
+import useAnimationOnScroll from "react-animate-on-scroll-animate.css"
+import {useRef} from "react";
 
 function App() {
-
+  const scrollElem = useRef(null)
+  useAnimationOnScroll(scrollElem || null, {noRepeat : false})
   return (
     <>
-    <ToastContainer/>
+      <ToastContainer/>
       <section id='header' className='sticky top-0 z-10'>
         <Header/>
       </section>
       <Element name='home'>
-        <section className='h-screen bg-primaryColor flex flex-col md:flex-row md:justify-between justify-center items-center'>
+        <section className='h-screen home-main flex flex-col md:flex-row md:justify-between justify-center items-center'>
           <Home/>
         </section>
       </Element>

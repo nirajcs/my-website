@@ -1,39 +1,53 @@
 body{
-  font-family: 'Nanum Gothic Coding' , 'Manrope' , monospace , sans-serif;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', 'Manrope' , monospace , sans-serif;
+  overflow-x: hidden;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+#nav-link {
+  display: inline-block;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  position: relative; /* Add relative positioning for the after pseudo-element */
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#nav-link:after {
+  display: block;
+  content: '';
+  width: 100%; /* Use 100% to apply the border to the whole div */
+  border-bottom: solid 4px rgb(255, 255, 255);  
+  transform: scaleX(0);  
+  transition: transform 400ms ease-in-out;
+  position: absolute; /* Position the border relative to the div */
+  bottom: 0; 
+  left: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+#nav-link:hover:after { 
+  transform: scaleX(1); 
 }
 
-.card {
-  padding: 2em;
+#nav-link.from-left:after {
+  transform-origin: left;
 }
 
-.read-the-docs {
-  color: #888;
+#nav-link.from-right:after {
+  transform-origin: right;
+}
+
+.home-main {
+  width: 100%;          /* Set the width of the div */
+  background-image: url('./assets/home-bg.jpg');  /* Set the background image */
+  background-size: cover;   /* Ensures the image covers the entire div */
+  background-position: center;  /* Centers the image */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+}
+
+.name-home {
+  color: #2a2a2a;
+}
+
+.mask-image {
+  mask-image: linear-gradient(to right, transparent 0, black 128px, black calc(100% - 128px), transparent 100%);
 }
