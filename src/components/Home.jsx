@@ -24,10 +24,10 @@ const Home = () => {
         <div className='animate-onscroll-trigger w-5/6 flex justify-center lg:justify-start'>
           <div animation-settings="animate__fadeInDown lg:animate__fadeInLeft" className='animate__onscroll flex flex-col gap-3 justify-center lg:w-full'>
             <div className="w-full">
-              <h1 className='text-5xl text-white lg:text-7xl font-bold w-full'>I am <span className='text-textColor'>Niraj C S</span></h1>
+              <h1 className='md:text-5xl text-3xl text-white lg:text-7xl font-bold w-full'>I am <span className='text-textColor'>Niraj C S</span></h1>
             </div>
             <div className='w-full'>
-              <h3 className='text-white font-medium text-2xl lg:text-4xl w-full'>MERN Stack Developer</h3>
+              <h3 className='text-white font-medium md:text-2xl text-lg lg:text-4xl w-full'>MERN Stack Developer</h3>
             </div>
           </div>
         </div>
