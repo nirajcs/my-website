@@ -31,8 +31,8 @@ const Contact = () => {
       setMessage('');
   };
   return (
-    <>
-      <div className='animate-onscroll-trigger h-full md:w-1/2'>
+    <div className='animate-onscroll-trigger flex w-full'>
+      <div className='h-full md:w-1/2'>
         <div animation-settings="animate__fadeInLeft" className='animate__onscroll p-5'>
           <h1 style={{fontFamily:'sans-serif'}} className='font-bold text-3xl lg:text-5xl'>Say Something!!</h1>
           <form ref={form} onSubmit={sendEmail}>
@@ -52,7 +52,7 @@ const Contact = () => {
           </form>
         </div>
       </div>
-      <div className='animate-onscroll-trigger h-full md:w-1/2 md:my-0 my-5 bg-primaryColor flex flex-col justify-center items-center rounded-lg p-5'>
+      <div className='h-full md:w-1/2 md:my-0 my-5 bg-primaryColor flex flex-col justify-center items-center rounded-lg p-5'>
         <div animation-settings="animate__fadeInRight" className='animate__onscroll flex flex-col justify-center items-center'>
           <div className='my-5'>
             <h1 style={{fontFamily:'sans-serif'}} className='font-bold text-3xl lg:text-5xl text-white'>Connect Me On!!</h1>
@@ -64,7 +64,7 @@ const Contact = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   )
 }
 
